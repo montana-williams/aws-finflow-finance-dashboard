@@ -27,3 +27,8 @@ output "web_acl_id" {
   description = "The ID of the WAF Web ACL"
   value       = aws_wafv2_web_acl.finflow.id
 }
+
+output "lambda_sg_id" {
+  description = Security Group ID for Lambda"
+  value       = aws_security_group.lambda.id
+}

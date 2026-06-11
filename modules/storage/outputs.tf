@@ -3,7 +3,7 @@ output "bucket_arn" {
   value       = aws_s3_bucket.main.arn
 }
 
-output "bucket_name" {
+output "s3_bucket_name" {
   description = "S3 bucket name — pass to Lambda environment variables"
   value       = aws_s3_bucket.main.id
 }

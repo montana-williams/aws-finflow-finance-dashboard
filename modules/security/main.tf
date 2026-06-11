@@ -117,6 +117,25 @@ resource "aws_security_group" "elasticache" {
   }
 }
 
+resource "aws_security_group" "lambda" {
+  name        = "lambda-sg"
+  description = "Allow Lambda outbound to RDS and ElastiCache"
+  vpc_id      = var.vpc_id
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name        = "${var.project_name}-lambda-sg"
+    Environment = var.environment
+    Project     = var.project_name
+  }
+}
+
 resource "aws_network_acl" "public" {
   vpc_id     = var.vpc_id
   subnet_ids = var.public_subnet_ids
