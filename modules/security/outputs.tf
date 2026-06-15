@@ -29,6 +29,6 @@ output "web_acl_id" {
 }
 
 output "lambda_sg_id" {
-  description = Security Group ID for Lambda"
+  description = "Security Group ID for Lambda"
   value       = aws_security_group.lambda.id
 }

@@ -26,7 +26,7 @@ variable "db_endpoint" {
 }
 
 variable "lambda_sg_id" {
-  description = Security Group ID for Lambda"
+  description = "Security Group ID for Lambda"
   type        = string
 }
 
