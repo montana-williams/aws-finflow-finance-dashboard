@@ -38,10 +38,4 @@ resource "aws_cognito_user_pool_client" "finflow" {
   "ALLOW_USER_PASSWORD_AUTH",
   "ALLOW_REFRESH_TOKEN_AUTH"
 ]
-
-tags = {
-  Name        = "${var.project_name}-client"
-  Environment = var.environment
-  Project     = var.project_name
-}
 }

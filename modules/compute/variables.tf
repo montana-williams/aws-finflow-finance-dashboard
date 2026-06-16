@@ -54,8 +54,3 @@ variable "iam_instance_profile_name" {
   description = "IAM instance profile name for EC2"
   type        = string
 }
-
-variable "target_group_arn" {
-  description = "Target group ARN for Auto Scaling group"
-  type        = string
-}

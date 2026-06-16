@@ -114,7 +114,7 @@ resource "aws_autoscaling_group" "main" {
 
   vpc_zone_identifier = var.private_subnet_ids
                                                      
-  target_group_arns   = [var.target_group_arn]       
+  target_group_arns   = [aws_lb_target_group.main.arn]       
 
   health_check_type         = "ELB"                  
   health_check_grace_period = 300                    
